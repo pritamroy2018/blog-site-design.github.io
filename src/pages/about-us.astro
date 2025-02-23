@@ -1,13 +1,10 @@
 ---
-import Welcome from '../components/Welcome.astro';
+
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Services from '../components/Services.astro';
 import Footer from '../components/Footer.astro';
 import About from '../components/About.astro';
-const title = 'Astro First Projet';
-
-
+const title = 'Pricing';
 
 
 
@@ -16,10 +13,9 @@ const title = 'Astro First Projet';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title={title}>
+<Layout title="About Us">
 	<Header />
-	<Welcome />	
+	
 	<About />
-	<Services />
 	<Footer />
 </Layout>
