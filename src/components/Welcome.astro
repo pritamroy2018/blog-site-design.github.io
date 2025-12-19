@@ -1,4 +1,7 @@
-
+---
+import { Marquee, MarqueeContent } from "@/components/ui/marquee"
+const items = ["React", "Vue", "Angular", "Svelte", "Astro", "Next.js", "Wordpress", "Node.Js"]
+---
 
 
 
@@ -30,7 +33,7 @@
 
 
 
-<div class="bg-purple-300 py-24 sm:py-32">
+<div class="bg-purple-50 py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:text-center">
       <h2 class="text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
@@ -88,7 +91,7 @@
   </div>
 </div>
 
-<div class="bg-base-200">
+<div class="bg-zinc-50">
   <div class="w-6xl mx-auto py-20 min-h-[300px]">
     <div class="join join-vertical w-full grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
       <div class="collapse collapse-arrow join-item border-base-300 border bg-base-100 rounded-lg">
@@ -109,3 +112,17 @@
     </div>
   </div>
 </div>
+
+<div class="w-6xl mx-auto">
+  <Marquee class="py-5">
+    <MarqueeContent>
+      {
+        items.map((item) => (
+          <span class="text-muted-foreground text-sm">{item}</span>
+        ))
+      }
+    </MarqueeContent>
+  </Marquee>
+</div>
+
+
