@@ -1,6 +1,8 @@
 ---
 import { Marquee, MarqueeContent } from "@/components/ui/marquee"
 const items = ["React", "Vue", "Angular", "Svelte", "Astro", "Next.js", "Wordpress", "Node.Js"]
+
+
 ---
 
 
@@ -113,16 +115,22 @@ const items = ["React", "Vue", "Angular", "Svelte", "Astro", "Next.js", "Wordpre
   </div>
 </div>
 
-<div class="w-6xl mx-auto">
-  <Marquee class="py-5">
-    <MarqueeContent>
-      {
-        items.map((item) => (
-          <span class="text-muted-foreground text-sm">{item}</span>
-        ))
-      }
-    </MarqueeContent>
-  </Marquee>
+
+
+
+<!-- Open the modal using ID.showModal() method -->
+<div class="text-center py-5">
+  <button class="btn" onclick="my_modal_1.showModal()">Click Me!</button>
 </div>
-
-
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
